@@ -10,6 +10,10 @@ import (
 
 func main() {
 	input := os.Args[1]
-	l := strings.Split(input, " ")
-	fmt.Println(len(l))
+	if strings.EqualFold(input, "") {
+		fmt.Println("0")
+	} else {
+		l := strings.Split(input, " ")
+		fmt.Println(len(l))
+	}
 }
